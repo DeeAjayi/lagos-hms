@@ -18,10 +18,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      #- name: Install dependencies
-       # run: yarn install
-     # - name: Build
-      #  run: yarn build --prod
+      - name: Install dependencies
+        run: yarn install
+      - name: Build
+        run: yarn build --prod
       - name: Deploy
         uses: reggionick/s3-deploy@v3
         with:
